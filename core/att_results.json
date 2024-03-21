@@ -1,0 +1,81 @@
+{
+    "type": "CONNECT_OK",
+    "message": "CGI Output",
+    "content": [
+        {
+            "type": "SVC",
+            "path": "/org/bluez/hci0/dev_C6_CA_0E_18_E2_4E/service0001",
+            "uuid": "00001801-0000-1000-8000-00805f9b34fb",
+            "name": "Generic Attribute Service",
+            "flags": []
+        },
+        {
+            "type": "CHR",
+            "path": "/org/bluez/hci0/dev_C6_CA_0E_18_E2_4E/service0001/char0002",
+            "uuid": "00002a05-0000-1000-8000-00805f9b34fb",
+            "name": "Service Changed",
+            "flags": [
+                "indicate"
+            ]
+        },
+        {
+            "type": "DSC",
+            "path": "/org/bluez/hci0/dev_C6_CA_0E_18_E2_4E/service0001/char0002/desc0004",
+            "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+            "name": "Client Characteristic Configuration",
+            "flags": []
+        },
+        {
+            "type": "CHR",
+            "path": "/org/bluez/hci0/dev_C6_CA_0E_18_E2_4E/service0001/char0005",
+            "uuid": "00002b29-0000-1000-8000-00805f9b34fb",
+            "name": "Unknown",
+            "flags": [
+                "read",
+                "write"
+            ]
+        },
+        {
+            "type": "CHR",
+            "path": "/org/bluez/hci0/dev_C6_CA_0E_18_E2_4E/service0001/char0007",
+            "uuid": "00002b2a-0000-1000-8000-00805f9b34fb",
+            "name": "Unknown",
+            "flags": [
+                "read"
+            ]
+        },
+        {
+            "type": "SVC",
+            "path": "/org/bluez/hci0/dev_C6_CA_0E_18_E2_4E/service0010",
+            "uuid": "6e400001-b5a3-f393-e0a9-e50e24dcca9e",
+            "name": "Unknown",
+            "flags": []
+        },
+        {
+            "type": "CHR",
+            "path": "/org/bluez/hci0/dev_C6_CA_0E_18_E2_4E/service0010/char0011",
+            "uuid": "6e400003-b5a3-f393-e0a9-e50e24dcca9e",
+            "name": "Unknown",
+            "flags": [
+                "notify"
+            ]
+        },
+        {
+            "type": "DSC",
+            "path": "/org/bluez/hci0/dev_C6_CA_0E_18_E2_4E/service0010/char0011/desc0013",
+            "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+            "name": "Client Characteristic Configuration",
+            "flags": []
+        },
+        {
+            "type": "CHR",
+            "path": "/org/bluez/hci0/dev_C6_CA_0E_18_E2_4E/service0010/char0014",
+            "uuid": "6e400002-b5a3-f393-e0a9-e50e24dcca9e",
+            "name": "Unknown",
+            "flags": [
+                "write-without-response",
+                "write"
+            ]
+        }
+    ]
+}

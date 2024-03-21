@@ -1,0 +1,317 @@
+[
+    {
+        "bdaddr": "73:1E:F9:D1:ED:AC",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "04:EE:03:EC:59:80",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -89
+    },
+    {
+        "bdaddr": "52:E9:54:98:D1:88",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "E8:25:B4:E1:49:CF",
+        "name": "NB1TM",
+        "paired": false,
+        "connected": false,
+        "RSSI": -87
+    },
+    {
+        "bdaddr": "5B:EB:0D:BF:7B:90",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "28:11:A5:90:E0:88",
+        "name": "LE-Bose Color II SoundLink",
+        "paired": false,
+        "connected": false,
+        "RSSI": -75
+    },
+    {
+        "bdaddr": "4A:CC:22:FF:75:EA",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "40:3B:E0:BE:73:D1",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "7C:AA:86:79:12:C0",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "70:C1:A5:5A:24:9D",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "65:B0:15:72:AC:6A",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "1F:67:F1:D0:ED:FA",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "65:1D:6B:B3:00:A6",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "61:30:5F:53:55:01",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "7D:35:F8:BC:09:4C",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "84:BA:20:72:7E:81",
+        "name": "NGT",
+        "paired": false,
+        "connected": false,
+        "RSSI": -55
+    },
+    {
+        "bdaddr": "0C:36:34:43:60:CA",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "D4:9D:C0:8A:35:C5",
+        "name": "[TV] Samsung Q60 Series (55)",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "46:C9:A3:C3:F7:DD",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "F5:6E:A2:FD:28:42",
+        "name": "SYLVANIA A19 C1-1047",
+        "paired": false,
+        "connected": false,
+        "RSSI": -70
+    },
+    {
+        "bdaddr": "4C:64:4C:CE:BE:C2",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "7D:32:3A:8D:CD:E3",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": "1"
+    },
+    {
+        "bdaddr": "48:9E:BD:86:10:38",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -87
+    },
+    {
+        "bdaddr": "4B:0C:2B:37:F8:4E",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -59
+    },
+    {
+        "bdaddr": "04:FB:C4:CF:15:6D",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -58
+    },
+    {
+        "bdaddr": "5D:01:5E:9D:0C:6C",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -59
+    },
+    {
+        "bdaddr": "78:B7:C9:42:87:84",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -52
+    },
+    {
+        "bdaddr": "53:43:83:4A:04:18",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -79
+    },
+    {
+        "bdaddr": "75:A3:03:19:B8:92",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -42
+    },
+    {
+        "bdaddr": "49:77:42:1D:CE:58",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -80
+    },
+    {
+        "bdaddr": "75:54:85:8E:75:51",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -89
+    },
+    {
+        "bdaddr": "6D:1D:5B:0F:FF:CE",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -82
+    },
+    {
+        "bdaddr": "4B:DF:F3:C5:90:57",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -77
+    },
+    {
+        "bdaddr": "60:D0:BF:BF:8D:7A",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -74
+    },
+    {
+        "bdaddr": "78:BC:13:15:86:3F",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -82
+    },
+    {
+        "bdaddr": "55:62:35:87:F8:9F",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -86
+    },
+    {
+        "bdaddr": "48:72:87:79:DA:E4",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -75
+    },
+    {
+        "bdaddr": "47:CE:3E:3E:DF:DE",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -83
+    },
+    {
+        "bdaddr": "46:43:D6:9E:F5:4F",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -84
+    },
+    {
+        "bdaddr": "4B:43:A8:4E:65:22",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -77
+    },
+    {
+        "bdaddr": "C0:00:00:00:03:5D",
+        "name": "LEDDMX-00-0003",
+        "paired": false,
+        "connected": false,
+        "RSSI": -89
+    },
+    {
+        "bdaddr": "70:86:B7:CA:3B:63",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -87
+    },
+    {
+        "bdaddr": "09:3D:54:88:E3:93",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -89
+    },
+    {
+        "bdaddr": "54:10:A1:DB:5B:DE",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -87
+    },
+    {
+        "bdaddr": "41:8D:56:EB:2B:98",
+        "name": "Unknown",
+        "paired": false,
+        "connected": false,
+        "RSSI": -90
+    }
+]
