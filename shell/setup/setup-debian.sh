@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e pipefail
 
-. ./versions.sh
+. ./elly/shell/setup/versions.sh
 
 echo "
 
@@ -23,7 +23,7 @@ echo "
 
 **********************************************************
 *                                                        *
-*             Installing Package Deoendencies            *
+*                Updating Aptitude Packages              *
 *                                                        *
 **********************************************************
 
@@ -35,14 +35,14 @@ Updating Aptitude core/packages. Standby...
 '
 
 # pre-script system updates
-sudo apt update && sudo apt dist-upgrade -y > /dev/null
+sudo apt update && sudo apt dist-upgrade -y
 
 echo "
 
 
 **********************************************************
 *                                                        *
-*               Aptitude update completed                *
+*             Installing Package Dependencies            *
 *                                                        *
 **********************************************************
 
@@ -51,37 +51,37 @@ echo "
 
 echo 'Installing SDKs/runtime dependencies. Standby...'
 
-. ./deps.sh
+. ./elly/shell/setup/deps.sh
 
 echo "
 
 
 **********************************************************
 *                                                        *
-*              SDK dependencies installed                *
+*                   Installing VSCodium                  *
 *                                                        *
 **********************************************************
 
 
 "
 
-. ./ vsc-install.sh
+. ./elly/shell/setup/vsc-install.sh
 
 echo "
 
 
 **********************************************************
 *                                                        *
-*                   VSCodium installed                   *
+*              Configuring Shell Environment             *
 *                                                        *
 **********************************************************
 
 
 "
 
-. ./zsh-setup.sh
+. ./elly/shell/setup/shell-setup.sh
 
-. ./xrdp-setup.sh
+. ./elly/shell/setup/xrdp-setup.sh
 
 
 echo "
@@ -89,39 +89,28 @@ echo "
 
 **********************************************************
 *                                                        *
-*                     Shell configured                   *
+*                    Configuring Python                  *
 *                                                        *
 **********************************************************
 
 
 "
 
-. ./pyenv-seup.sh "$(PYTHON_VERSION)"
+. ./elly/shell/setup/pyenv-seup.sh "${PYTHON_VERSION}"
 
 echo "
 
 
 **********************************************************
 *                                                        *
-*                    Python configured                   *
+*                  Upgrading BlueZ Stack                 *
 *                                                        *
 **********************************************************
 
 
 "
 
-. ./bluez-upgrade.sh ${BLUEZ_VERSION}
-
-echo "
-
-**********************************************************
-*                                                        *
-*                   BlueZ stack updated                  *
-*                                                        *
-**********************************************************
-
-
-"
+. ./elly/shell/setup/bluez-upgrade.sh "${BLUEZ_VERSION}"
 
 echo "
 
@@ -132,8 +121,10 @@ echo "
 *                                                        *
 **********************************************************
 
+Your system is now equipped to use Elly and its BLE functionality.
+For next steps, refer to the README located in the repo's root directory.
 
-* Have a nice day, friend!
+  * Have a nice day, friend! *
 ░░░░░░░░░░░░░░░░░░░░░░█████████
 ░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███
 ░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███
