@@ -1,6 +1,14 @@
-#!/bin/env/bash
+#!/bin/bash
 
-# dev dependencies
+echo 'Setting firmware release status to:'
+
+echo 'FIRMWARE_RELEASE_STATUS="stable"' | sudo tee /etc/default/rpi-eeprom-update
+
+echo '
+Installing development/runtime dependencies. Stand by...
+'
+
+# Elly dev dependencies
 sudo apt -y install zsh \
 zsh-syntax-highlighting \
 openjdk-17-jdk \
@@ -39,4 +47,8 @@ python3-openssl \
 wget \
 xrdp \
 xserver-xorg-input-evdev \
-curl  > /dev/null
+curl
+
+echo '
+Success!
+'

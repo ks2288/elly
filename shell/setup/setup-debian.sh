@@ -1,31 +1,21 @@
 #!/bin/bash
 set -e pipefail
 
-if [ "$#" -e 0 ]; then
-    echo "Please provide both a Python and a BlueZ version using the -p and -b flags respectively, each followed individually by a version string."
-fi
+. ./versions.sh
 
-BLUEZ_VERSION=''
-PY_VERSION=''
+echo "
 
-eval set -- "$TEMP"
-while true ; do
-    case "$1" in
-        -b )
-            BLUEZ_VERSION=$2
-            shift 2
-        ;;
-        -p )
-            PY_VERSION=$2
-            shift 2
-        ;;
-        *)
-            break
-        ;;
-    esac 
-done;
 
-read -p "This script will install Elly development dependencies for Debian. Proceed? (y/n)? " answer
+**********************************************************
+*                                                        *
+*                       Elly Setup                       *
+*                                                        *
+**********************************************************
+
+
+"
+
+read -p "This script will install Elly dependencies for Debian. Proceed? (y/n)? " answer
 case ${answer:0:1} in
 y|Y )
 echo "
@@ -33,7 +23,7 @@ echo "
 
 **********************************************************
 *                                                        *
-*                  Viper setup initiated                 *
+*             Installing Package Deoendencies            *
 *                                                        *
 **********************************************************
 
@@ -106,7 +96,7 @@ echo "
 
 "
 
-. ./pyenv-seup.sh ${PY_VERSION}
+. ./pyenv-seup.sh "$(PYTHON_VERSION)"
 
 echo "
 

@@ -1,4 +1,4 @@
-#!/bin/env/bash
+#!/bin/bash
 
 echo 'Adding VSCodium APT source/keys...'
 
@@ -6,8 +6,8 @@ wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.g
 
 echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
 
-sudo apt update > /dev/null
+sudo apt update
 
 echo 'Installing VSCodium...'
 
-sudo apt -y install codium > /dev/null
+sudo apt -y install codium

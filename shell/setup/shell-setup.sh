@@ -1,4 +1,5 @@
-#!/bin/env/bash
+#!/bin/bash
+set -e
 
 echo 'Configuring shell profile...'
 
@@ -48,6 +49,8 @@ eval "$(pyenv init -)"
 ' | sudo tee -a ~/.zshrc
 
 sudo chsh -s /bin/zsh $USER
+
+exec /bin/zsh
 
 source ~/.zshrc
 

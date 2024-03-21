@@ -1,10 +1,8 @@
-#!/bin/env/bash
+#!/bin/bash
 
 if [ "$#" -ne 1 ]; then
     echo "Please provide a version of Python to install..."
 fi
-
-pyv=$1
 
 echo 'Installing pyenv...'
 
@@ -14,9 +12,9 @@ echo '
 Done.
 '
 
-pyenv install ${pyv}
+pyenv install 3.10.5
 
-pyenv global ${pyv}
+pyenv global 3.10.5
 
 pip_dir=`which pip`
 
