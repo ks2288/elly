@@ -1,4 +1,4 @@
-#!/bin/bash/env
+#!/bin/env/bash
 
 if [ "$#" -ne 1 ]; then
     echo "Please provide a version of Python to install..."

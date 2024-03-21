@@ -1,4 +1,4 @@
-#!/bin/bash/env
+#!/bin/env/bash
 
 # dev dependencies
 sudo apt -y install zsh \

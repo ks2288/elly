@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e pipefail
 
-if [ "$#" -ne 4 ]; then
+if [ "$#" -e 0 ]; then
     echo "Please provide both a Python and a BlueZ version using the -p and -b flags respectively, each followed individually by a version string."
 fi
 

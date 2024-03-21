@@ -1,4 +1,4 @@
-#!/bin/bash/env
+#!/bin/env/bash
 
 echo 'Adding VSCodium APT source/keys...'
 
