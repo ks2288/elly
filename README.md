@@ -1,5 +1,9 @@
 # README #
 
+### NOTE: this repo is a WIP while it gets some functional/documentation additions ###
+
+Elly (from the "L" and "E" portions of BLE, as a truncated name) is a toolset for working with (or creating) GATT service (both client and server) implementations.
+
 This repo contains a set of more finely-tuned Python implementations based on the examples provided by the [BLE SIG](https://www.bluetooth.com/bluetooth-resources/bluetooth-for-linux/). Primarily, this repo contains wrappers in both Python and BaSH that allow a more-streamlined process to get up-and-running quickly for development with BLE GATT services. This repo also contains a Debian (or any other variant that supports/uses Aptitude and can pull/run components from the Debian sources) setup script that will download all of the requisite dependencies using both `apt` and `pip` via Python (`pyenv` is also included).
 
 ### Code Purpose ###
