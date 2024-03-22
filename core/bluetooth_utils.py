@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import dbus
 import sys
 from sys import stdin, stdout

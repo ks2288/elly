@@ -96,7 +96,7 @@ echo "
 
 "
 
-. ./elly/shell/setup/pyenv-seup.sh "${PYTHON_VERSION}"
+. ./elly/shell/setup/pyenv-setup.sh "${PYTHON_VERSION}"
 
 echo "
 

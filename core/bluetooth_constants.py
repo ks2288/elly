@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 from pathlib import Path
 
 ADAPTER_NAME = "hci0"

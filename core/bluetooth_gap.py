@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import bluetooth_constants as constants
 import bluetooth_core as core
 import exceptions

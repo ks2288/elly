@@ -33,28 +33,11 @@ alias zs="source ~/.zshrc"
 # ZSH default text editor
 export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/nano
-
-# pyenv
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 ' | sudo tee ~/.zshrc
-
-echo '
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-' | sudo tee -a ~/.zshrc
 
 sudo chsh -s /bin/zsh $USER
 
-exec /bin/zsh
-
-source ~/.zshrc
-
-echo 'Configuring shell credentials...'
+echo "Adding $USER to Bluetooth group..."
 
 sudo usermod -aG bluetooth $USER
 

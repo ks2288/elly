@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import bluetooth_utils as utils
 import bluetooth_core as core
 import exceptions

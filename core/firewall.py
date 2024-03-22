@@ -1,7 +1,4 @@
-#!/usr/bin/python3
-
 import json
-
 import bluetooth_gap as gap
 import bluetooth_gatt as gatt
 

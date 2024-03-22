@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import bluetooth_constants
 import bluetooth_utils
 import cgi

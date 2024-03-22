@@ -1,8 +1,3 @@
-#!/usr/bin/python3
-#
-# Connects to a specified device
-# Run from the command line with a bluetooth device address argument
-
 import bluetooth_constants
 import bluetooth_utils
 import bluetooth_gap as gap
