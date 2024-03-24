@@ -16,7 +16,7 @@ This code exists as a working template that provides a base of code for concrete
 
 ### Structure ###
 
-The directory `elly/core/gatt-server-core` is broken down into three subdirectories: 
+The directory `elly/gatt-server` is broken down into three subdirectories: 
 
 1. `common`
     * Contains concrete code that will run on all such implementations of Elly GATT servers
@@ -43,11 +43,11 @@ When your server code has been implemented, the server can be spawned using any 
 As an example, a very simple, simulated internal diabetic pump (IDP) GATT server has been provided. To use this script, perform the following:
 
 1. Open a new terminal window, and run the following command:
-    * `python elly/core/gatt-server-core/server_apps/idp_gatt_server.py`
+    * `python elly/gatt-server/server_apps/idp_gatt_server.py`
 1. When successfully spawned, you will see the server return the following output:
 
 ```
-Registering MDAdvertisement /org/bluez/elly/advertisement0
+Registering EllyAdvertisement /org/bluez/elly/advertisement0
 Initialising BatteryService object
 Adding TemperatureCharacteristic to the service
 creating Characteristic with path=/org/bluez/elly/service0/char0

@@ -27,18 +27,18 @@ This list is pretty short, and consists of only two core pieces of computing har
 
 WIP
 
-* Scan: `python3 ~/elly/core/connection_utils.py scan` OR simply `blescan` from the Pi user's home directory
+* Scan: `python3 ~/elly/gatt-client/connection_utils.py scan` OR simply `ellyscan` from the Pi user's home directory
 * Connect: `python3 ~/elly/shell/connect_discover.py [device address]`
 * Reset BLE known devices: `sh ~/elly/shell/clear-ble-devices.sh` OR simply `bleclear` from the Pi user's home directory
 * Reset BLE hardware: `sudo systemctl restart bluetooth`
 
 ### Output ###
 
-The connection-based commands (scan and connect, and any others) have the ability to dispatch BLE process results through whichever means you deem most appropriate. For example, you may choose to, instead of printing results via STDOUT, use a websocket connection to send results to separate module within a multitiered system. For Elly, the command results simply end up printed as standard command feedback via the active shell used for their execution. 
+The connection-based commands (scan and connect, and any others) have the ability to dispatch BLE process results through whichever means you deem most appropriate. For example, you may choose to, instead of printing results via STDOUT, use a websocket connection to send results to separate module within a multitiered system. For Elly, the command results simply end up printed as standard command feedback via the active shell used for their execution. Results that are known to be multiline/multi-element can easily be "pretty-printed" by piping the results through the Python module `json.tool`. An example can be seen within the cpnnvenience aliases generated during the setup script, specifically within the `zsh` profile creation/addendum section of the script located at `elly/shell/setup/shell-setup.sh`.
 
-These results are meant to be generic as to increase their ability to be used in a multiprocess environment. As such, the results are organized in a simple JSON string format with five KVPs/elements that are mapped to the properties exposed by the BlueZ Linux framework.
+These results are meant to be generic as to increase their ability to be used in a multiprocess-oriented environment (Java's `ProcessBuilder`, for example). As such, the results carry a simple JSON string format with five KVPs/elements that are mapped to properties exposed by the BlueZ Linux framework via Python/DBUS.
 
-The following is an example of the output received from a successful BLE scan:
+The following is an example of the output received from a successful BLE scan. These sample results include five devices, with each device represented by an individual element within a JSON array.
 ```
 [
     {
@@ -56,158 +56,11 @@ The following is an example of the output received from a successful BLE scan:
         "RSSI": -82
     },
     {
-        "bdaddr": "48:9E:BD:86:10:38",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -79
-    },
-    {
-        "bdaddr": "58:F5:3E:21:11:CB",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -47
-    },
-    {
         "bdaddr": "F5:6E:A2:FD:28:42",
         "name": "SYLVANIA A19 C1-1047",
         "paired": false,
         "connected": false,
         "RSSI": -65
-    },
-    {
-        "bdaddr": "6C:D0:70:1B:01:84",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -49
-    },
-    {
-        "bdaddr": "70:2A:5D:38:08:AF",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -51
-    },
-    {
-        "bdaddr": "66:7E:FE:F4:DB:07",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -58
-    },
-    {
-        "bdaddr": "6D:26:E6:02:B4:91",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -83
-    },
-    {
-        "bdaddr": "84:BA:20:72:7E:99",
-        "name": "ARM",
-        "paired": false,
-        "connected": false,
-        "RSSI": -66
-    },
-    {
-        "bdaddr": "08:F7:50:7C:39:77",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -60
-    },
-    {
-        "bdaddr": "49:A8:21:EC:08:58",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -86
-    },
-    {
-        "bdaddr": "60:B9:8B:B8:60:69",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -77
-    },
-    {
-        "bdaddr": "52:1F:22:A6:57:B1",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -85
-    },
-    {
-        "bdaddr": "61:59:6A:6D:66:21",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -73
-    },
-    {
-        "bdaddr": "10:91:A2:7C:12:C2",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -85
-    },
-    {
-        "bdaddr": "61:96:20:A0:82:33",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -59
-    },
-    {
-        "bdaddr": "6E:8C:56:E4:6B:CE",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -76
-    },
-    {
-        "bdaddr": "47:41:DB:D0:0D:36",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -83
-    },
-    {
-        "bdaddr": "52:24:CD:77:07:4F",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -86
-    },
-    {
-        "bdaddr": "04:EE:03:EC:59:80",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -92
-    },
-    {
-        "bdaddr": "DD:C8:5E:04:26:39",
-        "name": "NB1TM",
-        "paired": false,
-        "connected": false,
-        "RSSI": -79
-    },
-    {
-        "bdaddr": "5F:DE:DC:2A:42:16",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -60
-    },
-    {
-        "bdaddr": "74:AE:34:31:5B:D2",
-        "name": "Unknown",
-        "paired": false,
-        "connected": false,
-        "RSSI": -56
     },
     {
         "bdaddr": "0B:2C:D0:08:4C:34",
@@ -233,7 +86,7 @@ The following is an example of the output received from a successful BLE scan:
 ]
 ```
 
-Example output from connection (includes service discovery, and will return discoveries upon success):
+The following represents sample results from a successful connect command, during the process of which a service discovery will take place. Upon success, the connect command will return a JSON array whose elements represent the results of the GATT service discovery process. Each element represents one of the three types of GATT attributes: services, characteristics, and descriptors
 
 ```
 [
@@ -442,4 +295,6 @@ Example output from connection (includes service discovery, and will return disc
 ]
 ```
 
-These properties are only a select set of those offered by BlueZ. They are able to be added to within the Python code as needed (`elly/core/bluetooth_gap.py`, specifically the `discover_devices(timeout)` method). In this version of the code, observe the commented lines within that method as an example of how to add or remove properties exposed by BlueZ from and command results - in this case the `scan(scantime="2500")`, where `scantime` is the duration of the scan in milliseconds.
+The preceding result properties - for both scan and connect - are only a select set of those exposed by BlueZ. The specific properties (KVPS within the JSON content) returned via Python can be added to or removed from the result content as needed. To do so, changes need to be made to the corresponding Python code where appropriate. 
+
+In the first set of sample results involving a device scan (`elly/gatt-client/bluetooth_gap.py`, specifically the `discover_devices(timeout)` method), there are commented lines (around line 120) that serve as an example of how to add or remove properties exposed by BlueZ from your individual command results/operations. From there, they can then be moved up the Python execution tree, where in this case they are returned (printed) by the `scan(scantime="2500")` method within `connection_utils.py`, where `scantime` is the duration of the scan in milliseconds.

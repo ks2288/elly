@@ -36,13 +36,13 @@ alias zs="source ~/.zshrc"
 export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/nano
 
-alias ellyscan="python ~/elly/core/connection_utils.py scan"
-alias ellyconnect="python ~/elly/core/connect_discover.py"
-alias ellypair="python ~/elly/core/connection_utils.py pair"
+alias ellyscan="python ~/elly/gatt-client/connection_utils.py scan | python -m json.tool"
+alias ellyconnect="python ~/elly/gatt-client/connect_discover.py | python -m json.tool"
+alias ellypair="python ~/elly/gatt-client/connection_utils.py pair"
 alias ellyrefresh="bash ~/elly/shell/refresh-ble.sh"
 alias ellydisconnect="bash ~/elly/shell/ble-disconnect.sh"
-alias ellynotify="python ~/elly/core/util/notification_engine.py"
-alias ellywrite="python ~/elly/core/util/gatt_engine.py write"
+alias ellynotify="python ~/elly/gatt-client/util/notification_engine.py"
+alias ellywrite="python ~/elly/gatt-client/util/gatt_engine.py write"
 
 ' | sudo tee ~/.zshrc
 

@@ -2,7 +2,7 @@ import sys
 import dbus
 import dbus.mainloop.glib
 from pathlib import Path
-home = str(Path.home()) + '/.elly/core'
+home = str(Path.home()) + '/.elly/gatt-client/util'
 sys.path.insert(0, home)
 import bluetooth_constants
 import bluetooth_core

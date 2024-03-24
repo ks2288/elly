@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys
 from pathlib import Path
-home = str(Path.home()) + '/elly/core/gatt-server-core'
+home = str(Path.home()) + '/elly/gatt-server'
 sys.path.insert(0, home)
 import common.advertisement as adv
 import common.application as appl

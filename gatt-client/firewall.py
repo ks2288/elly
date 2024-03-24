@@ -10,7 +10,7 @@ CHARACTERISTIC_UUID = "characteristic_uuid"
 DESCRIPTOR_UUID = "descriptor_uuid"
 ALL_DEVICES = "*"
 
-with open('elly/core/config.json') as f:
+with open('elly/gatt-client/config.json') as f:
     config = json.load(f)
 
 

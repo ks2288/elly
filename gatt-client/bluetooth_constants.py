@@ -9,7 +9,7 @@ BLUEZ_SERVICE_NAME = "org.bluez"
 BLUEZ_NAMESPACE = "/org/bluez/"
 DBUS_PROPERTIES="org.freedesktop.DBus.Properties"
 DBUS_OM_IFACE = 'org.freedesktop.DBus.ObjectManager'
-RUNTIME_DIR_PATH = str(Path.home()) + '/elly/core'
+RUNTIME_DIR_PATH = str(Path.home()) + '/elly/gatt-client'
 
 ADAPTER_INTERFACE = BLUEZ_SERVICE_NAME + ".Adapter1"
 DEVICE_INTERFACE = BLUEZ_SERVICE_NAME + ".Device1"

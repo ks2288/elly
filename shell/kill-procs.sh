@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pkill -f -9 elly/core/
+pkill -f -9 elly

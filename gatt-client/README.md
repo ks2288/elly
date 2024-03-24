@@ -23,8 +23,8 @@ This list is pretty short, and consists of only two core pieces of computing har
 
 WIP
 
-* Scan: `python3 ~/elly/core/connection_utils.py scan` OR simply `blescan` from the Pi user's home directory
-* Connect: `python3 ~/elly/core/connect_discover.py [device address]`
+* Scan: `python3 ~/elly/gatt-client/connection_utils.py scan` OR simply `blescan` from the Pi user's home directory
+* Connect: `python3 ~/elly/gatt-client/connect_discover.py [device address]`
 * Reset BLE known devices: `sh ~/elly/shell/clear-ble-devices.sh` OR simply `bleclear` from the Pi user's home directory
 * Reset BLE hardware: `sudo systemctl restart bluetooth`
 

@@ -5,7 +5,7 @@ import resource
 import sys
 from unittest import result
 from pathlib import Path
-home = str(Path.home()) + '/.elly/core'
+home = str(Path.home()) + '/.elly/gatt-client/util'
 sys.path.insert(0, home)
 import bluetooth_gatt as gatt
 import bluetooth_core
@@ -71,5 +71,5 @@ elif command == "write":
 
 else:
     print("Command not recognized: " + command)
-    print("usage: python3 ~/.elly/core/platform/gatt_engine.py [command] [path] [optional content]")
+    print("usage: python3 ~/elly/gatt-client/util/gatt_engine.py [command] [path] [optional content]")
     sys.exit(1)

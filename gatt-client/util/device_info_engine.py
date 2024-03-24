@@ -4,7 +4,7 @@ import resource
 import sys
 import json
 from pathlib import Path
-home = str(Path.home()) + '/elly/core/util'
+home = str(Path.home()) + '/elly/gatt-client/util'
 sys.path.insert(0, home)
 import bluetooth_gatt as gatt
 import bluetooth_core

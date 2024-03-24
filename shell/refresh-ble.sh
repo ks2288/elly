@@ -5,7 +5,7 @@ for device in $(bluetoothctl devices | grep -o "[[:xdigit:]:]\{11,17\}"); do
 done
 
 # force kill all processes matching the util directory pattern
-pkill -f -9 elly/core/util
+pkill -f -9 elly/gatt-client/util
 
 # finally, restart the service
 sudo systemctl restart bluetooth
