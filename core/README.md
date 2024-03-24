@@ -102,7 +102,7 @@ Example output from a device scan:
     },
     {
         "bdaddr": "84:BA:20:72:7E:99",
-        "name": "NGT",
+        "name": "ARM",
         "paired": false,
         "connected": false,
         "RSSI": -66

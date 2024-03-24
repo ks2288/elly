@@ -24,8 +24,7 @@ device_proxy = None
 props_interface = None
 bus = dbus.SystemBus()
 
-def scan():
-    scantime = "2500"
+def scan(scantime="2500"):
     devices_discovered = gap.discover_devices(int(scantime))
     devices_allowed = ble_firewall.filter_devices(devices_discovered)
     msg = msg_utils.create_command_response('SCAN_RESULTS', devices_allowed)

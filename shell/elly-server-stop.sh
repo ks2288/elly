@@ -1,4 +1,3 @@
 #!/bin/bash
 
-pkill -f -9 mdccs.jar
-pkill -f -9 notification_engine
+pkill -f -9 gatt-server-core

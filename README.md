@@ -34,11 +34,11 @@ WIP
 
 ### Output ###
 
-The connection-based commands (scan and connect, and any others) have the ability to dispatch BLE process results through whichever means you deem most appropriate. For Mock Dev, the command server leverages CGI to read directly from STDOUT for any relevant callback-type information. 
+The connection-based commands (scan and connect, and any others) have the ability to dispatch BLE process results through whichever means you deem most appropriate. For example, you may choose to, instead of printing results via STDOUT, use a websocket connection to send results to separate module within a multitiered system. For Elly, the command results simply end up printed as standard command feedback via the active shell used for their execution. 
 
-The server also spawns, monitors, and controls each individual process through to its completion (errors included). As such, the two aforementioned example commands will simply "print" any resulting process feedback. If you run these scripts from the command line, expect to see the output in a way similar to any you've seen in the past when executing shell commands. However, any JRE ProcessBuilder treats these as callbacks from a given process, and the developer has the ability to handle them as such - in a purely reactive manner with little-to-no code overhead. For these examples, JSON strings are leveraged as a low-cost, efficient way to handle abstracted messaging from client to server to peripheral all the way back to client again in a manner that is entirely sovereign of the actual BLE functionality.
+These results are meant to be generic as to increase their ability to be used in a multiprocess environment. As such, the results are organized in a simple JSON string format with five KVPs/elements that are mapped to the properties exposed by the BlueZ Linux framework.
 
-Example output from a device scan:
+The following is an example of the output received from a successful BLE scan:
 ```
 [
     {
@@ -106,7 +106,7 @@ Example output from a device scan:
     },
     {
         "bdaddr": "84:BA:20:72:7E:99",
-        "name": "NGT",
+        "name": "ARM",
         "paired": false,
         "connected": false,
         "RSSI": -66
@@ -442,4 +442,4 @@ Example output from connection (includes service discovery, and will return disc
 ]
 ```
 
-These dictionaries are completely arbitrary per implementation, and may be tweaked on an as-needed basis per project from within both the Python and JVM server code (a KMP data model library is in progress to eliminate the need to edit the code in multiple places).
+These properties are only a select set of those offered by BlueZ. They are able to be added to within the Python code as needed (`elly/core/bluetooth_gap.py`, specifically the `discover_devices(timeout)` method). In this version of the code, observe the commented lines within that method as an example of how to add or remove properties exposed by BlueZ from and command results - in this case the `scan(scantime="2500")`, where `scantime` is the duration of the scan in milliseconds.

@@ -21,6 +21,8 @@ compinit
 autoload -Uz promptinit
 promptinit
 prompt clint
+autoload -Uz vcs_info
+precmd() { vcs_info }
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -33,6 +35,15 @@ alias zs="source ~/.zshrc"
 # ZSH default text editor
 export EDITOR=/usr/bin/nano
 export VISUAL=/usr/bin/nano
+
+alias ellyscan="python ~/elly/core/connection_utils.py scan"
+alias ellyconnect="python ~/elly/core/connect_discover.py"
+alias ellypair="python ~/elly/core/connection_utils.py pair"
+alias ellyrefresh="bash ~/elly/shell/refresh-ble.sh"
+alias ellydisconnect="bash ~/elly/shell/ble-disconnect.sh"
+alias ellynotify="python ~/elly/core/util/notification_engine.py"
+alias ellywrite="python ~/elly/core/util/gatt_engine.py write"
+
 ' | sudo tee ~/.zshrc
 
 sudo chsh -s /bin/zsh $USER
